@@ -1,17 +1,17 @@
 var inputFieldName;
 var inputFieldEmail;
-var inputFieldPhone; // Die 3 Variablen sind Inputformelements in HTML
-var outputList; // Liste wird als HTML Element ausgegeben
+var inputFieldPhone; // Die 3 Variablen sind Type Inputformelements in HTML
+var outputList; // Liste wird als HTML Element ausgegeben / ist vom type HTMLElement
 window.addEventListener("load", function () {
     document.querySelector("#addToContacts").addEventListener("click", function () {
-        addToContacts();
+        addToContacts(); // Bei Klick wird die Funktion addToContacts ausgeführt
     });
-    createContactsList();
+    createContactsList(); // Nach dem Laden der Seite wird Funktion createContactsList ausgeführt
 });
-inputFieldName = document.querySelector("#inputName");
+inputFieldName = document.querySelector("#inputName"); // Die IDs der Inputfelder werden Variablen zugewiesen
 inputFieldEmail = document.querySelector("#inputEmail");
 inputFieldPhone = document.querySelector("#inputPhone");
-outputList = document.querySelector("#outputList");
+outputList = document.querySelector("#outputList"); // Die ID des Outputfelds wird einer Variable zugewiesen
 var contactsList = [
     {
         name: "Martin Lotz",
@@ -31,13 +31,20 @@ function addToContacts() {
         phone: inputFieldPhone.value
     };
     contactsList.push(newContact);
-    createContactsList(); // Welche funktion ist hier gemeint? True muss weg I guess, und dann createContactslist
+    createContactsList(); // Nachdem der Kontakt zum Array hinzugefügt wurde wird die Kontaktliste in HTML Ausgegeben (Leider doppelt)
 }
 function createContactsList() {
-    for (var index_1 = 1; index_1 < contactsList.length; index_1++) { // Index ist 1, solange index unter der länge der Kontaktliste ist wird der Code ausgeführt, Index wird inkrementiert
-        outputList.innerHTML += "<li>" + contactsList[index_1].name +
-            " | " + contactsList[index_1].email +
-            " | " + contactsList[index_1].phone + "</li>";
+    for (var index = 0; index < contactsList.length; index++) { // Index ist 1, solange index unter der länge der Kontaktliste ist wird der Code ausgeführt, Index wird inkrementiert
+        outputList.innerHTML += "<li>" + contactsList[index].name +
+            " | " + contactsList[index].email +
+            " | " + contactsList[index].phone + "</li>"; // Liste + name + email + phone
     }
 }
+/*
+Grundlegende Dinge zu erklären:
+Variablen??? (zu basic maybe)
+HTML Elemente in Typescript einbinden? (DOM Manipulation maybe, ist glaub Lektion 6)
+For Schleife
+Array + Objects
+*/ 
 //# sourceMappingURL=babitz.js.map
