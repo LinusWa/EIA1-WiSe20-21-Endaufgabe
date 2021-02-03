@@ -22,7 +22,7 @@ outputList = document.querySelector("#outputList"); // Die ID des Outputfelds wi
 // newContact wird in die Contactlist gepusht.
  
 interface Contact { 
-    name: string; 
+    name: string;
     email: string;
     phone: string;
 }
@@ -39,7 +39,6 @@ var contactsList: Contact[] = [ // Array mit dem Namen contactsList wird basiere
         phone: "+49 (0) 160935798735"
     }
 ];
-
 
 function addToContacts(): void { // Hier wird ein neuer Kontakt aus einem Inputfeld heraus erstellt.
 
@@ -69,3 +68,6 @@ HTML Elemente in Typescript einbinden? (DOM Manipulation maybe, ist glaub Lektio
 For Schleife
 Array + Objects
 */ 
+
+
+

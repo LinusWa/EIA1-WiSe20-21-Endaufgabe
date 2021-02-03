@@ -46,5 +46,5 @@ Variablen??? (zu basic maybe)
 HTML Elemente in Typescript einbinden? (DOM Manipulation maybe, ist glaub Lektion 6)
 For Schleife
 Array + Objects
-*/ 
+*/
 //# sourceMappingURL=babitz.js.map
